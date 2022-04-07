@@ -1,17 +1,24 @@
-import * as React from 'react';
+import './index.less';
 
-const firstPage = () => {
-  React.useEffect(() => {}, []);
-
+export default function IndexPage() {
+  const height = window.innerHeight;
   return (
-    <div>
-      <video autoPlay controls width="320" height="240" muted>
-        <source src="../assets/firstPage.mp4" type="video/mp4" />
+    <div className="firstpage" style={{ height: height }}>
+      <video
+        autoPlay
+        muted
+        loop
+        controls
+        // playsInline
+        // x-webkit-airplay="true"
+        // x5-playsinline="true"
+        // webkit-playsinline="true"
+        // x5-video-player-type="h5"
+        width="100%"
+        // controlsList="nofullscreen nodownload noremoteplayback"
+      >
+        <source src="/firstPage.mp4" type="video/mp4" />
       </video>
-
-      <div>23333</div>
     </div>
   );
-};
-
-export default firstPage;
+}
