@@ -1,6 +1,15 @@
+import * as React from 'react';
+import { history } from 'umi';
+
 import './index.less';
 
 export default function IndexPage() {
+  React.useEffect(() => {
+    setTimeout(() => {
+      history.push('/main');
+    }, 4000);
+  }, []);
+
   const height = window.innerHeight;
   return (
     <div className="firstpage" style={{ height: height }}>
