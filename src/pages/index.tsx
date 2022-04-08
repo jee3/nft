@@ -7,7 +7,7 @@ export default function IndexPage() {
   React.useEffect(() => {
     setTimeout(() => {
       history.push('/main');
-    }, 4000);
+    }, 4500);
   }, []);
 
   const height = window.innerHeight;
