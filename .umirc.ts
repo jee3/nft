@@ -5,8 +5,13 @@ export default defineConfig({
     type: 'none',
   },
   routes: [
-    { path: '/', component: '@/pages/index' },
-    { exact: true, path: '/main', component: '@/pages/main' },
+    { path: '/index', component: '@/pages/index' },
+    {
+      exact: true,
+      path: '/',
+      component: '@/layouts/index',
+      routes: [{ path: '/homepage', component: '@/pages/homepage' }],
+    },
   ],
   fastRefresh: {},
 });
