@@ -7,9 +7,7 @@ import { ReactComponent as LogoBlack } from '@/assets/logo_black.svg';
 
 import './index.less';
 
-const Headbar = (props) => {
-  console.log(111, props);
-
+const homepage = () => {
   const goRoute = (key) => {
     history.push(`/${key}`);
   };
@@ -76,4 +74,4 @@ const Headbar = (props) => {
   );
 };
 
-export default Headbar;
+export default homepage;
