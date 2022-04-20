@@ -6,11 +6,59 @@ import { ReactComponent as Dis } from '@/assets/dis.svg';
 import { ReactComponent as LogoBlack } from '@/assets/logo_black.svg';
 
 import './index.less';
+import React from 'react';
 
-const homepage = () => {
+const header = (props) => {
+  console.log(111, window.location.pathname);
+  // const [current, setCurrent] = React.useState('');
+
+  // React.useEffect(() => {
+  //   setCurrent(location.pathname.split('/')[1]);
+  // }, []);
+
+  const currentPath = location.pathname.split('/')[1];
+
   const goRoute = (key) => {
     history.push(`/${key}`);
   };
+
+  const buttons = [
+    {
+      key: 'homepage',
+      name: 'HOMEPAGE',
+      path: '/homepage',
+    },
+    {
+      key: 'the-theatre',
+      name: 'THE THEATRE',
+      path: '/the-theatre',
+    },
+    {
+      key: 'space',
+      name: 'SPACE',
+      path: '/space',
+    },
+    {
+      key: 'past-release',
+      name: 'PAST RELEASE',
+      path: '/past-release',
+    },
+    {
+      key: 'box-office',
+      name: 'BOX OFFICE',
+      path: '/box-office',
+    },
+    {
+      key: 'collect',
+      name: 'COLLECT',
+      path: '/collect',
+    },
+    {
+      key: 'community',
+      name: 'COMMUNITY',
+      path: '/community',
+    },
+  ];
 
   return (
     <div className="header">
@@ -18,48 +66,18 @@ const homepage = () => {
         <LogoBlack height={42} width={80} />
       </div>
       <div className="header-right">
-        <button
-          onClick={() => {
-            goRoute('homepage');
-          }}
-        >
-          HOMEPAGE
-        </button>
-        <button
-          onClick={() => {
-            goRoute('the-theatre');
-          }}
-        >
-          THE THEATRE
-        </button>
-        <button
-          onClick={() => {
-            goRoute('past-release');
-          }}
-        >
-          PAST RELEASE
-        </button>
-        <button
-          onClick={() => {
-            goRoute('box-office');
-          }}
-        >
-          BOX OFFICE
-        </button>
-        <button
-          onClick={() => {
-            goRoute('collect');
-          }}
-        >
-          COLLECT
-        </button>
-        <button
-          onClick={() => {
-            goRoute('community');
-          }}
-        >
-          COMMUNITY
-        </button>
+        {buttons.map((button) => (
+          <button
+            className={
+              button.key === currentPath ? 'current-btn' : 'normal-btn'
+            }
+            onClick={() => {
+              goRoute(button.key);
+            }}
+          >
+            {button.name}
+          </button>
+        ))}
         <span className="header-link">
           <Twitter
             className="header-link-item twitter"
@@ -74,4 +92,4 @@ const homepage = () => {
   );
 };
 
-export default homepage;
+export default header;
