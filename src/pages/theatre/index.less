@@ -1,0 +1,112 @@
+.theatre {
+  .main {
+    display: flex;
+    .left {
+      display: inline-block;
+      height: 108px+46px+490px;
+      overflow: scroll;
+      align-items: center;
+
+      .left-btns {
+        margin-top: 46px;
+        width: 450px+80px;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 900;
+
+        .active {
+          width: 150px;
+          height: 40px;
+
+          background: #ffffff;
+          border: 2px solid #000000;
+          box-sizing: border-box;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        .normal {
+          width: 150px;
+          height: 40px;
+
+          background: #000000;
+          border: 2px solid #000000;
+          box-sizing: border-box;
+          border-radius: 10px;
+          color: #ffffff;
+          cursor: pointer;
+        }
+      }
+
+      &-text {
+        // margin-left: 75px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        /* or 125% */
+        color: #000000;
+      }
+    }
+  }
+}
+
+// 左侧黑灰竖条的样式
+// .theatre {
+//   .main {
+//     display: flex;
+//     .left {
+//       display: flex;
+//       height: 108px+46px+490px;
+//       overflow: scroll;
+//       align-items: center;
+
+//       ul {
+//         height: 540px;
+//       }
+
+//       li {
+//         list-style: none;
+//         cursor: pointer;
+//         &:nth-child(2) {
+//           margin-top: 45px;
+//         }
+//         &:nth-child(3) {
+//           margin-top: 45px;
+//         }
+//       }
+
+//       li:before {
+//         content: '';
+//         display: inline-block;
+//         width: 5px;
+//         height: 150px;
+//         background: #c4c4c4;
+//         border-radius: 5px;
+//       }
+
+//       .active:before {
+//         content: '';
+//         display: inline-block;
+//         width: 5px;
+//         height: 150px;
+//         background: #000000;
+//         border-radius: 5px;
+//       }
+
+//       &-text {
+//         margin-left: 75px;
+//         font-family: 'Inter';
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 24px;
+//         line-height: 30px;
+//         /* or 125% */
+//         color: #000000;
+//       }
+//     }
+//   }
+// }

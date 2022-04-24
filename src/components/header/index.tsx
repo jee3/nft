@@ -33,11 +33,11 @@ const header = (props) => {
       name: 'THE THEATRE',
       path: '/the-theatre',
     },
-    {
-      key: 'space',
-      name: 'SPACE',
-      path: '/space',
-    },
+    // {
+    //   key: 'space',
+    //   name: 'SPACE',
+    //   path: '/space',
+    // },
     {
       key: 'past-release',
       name: 'PAST RELEASE',
