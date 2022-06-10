@@ -6,7 +6,7 @@ import './index.less';
 export default function IndexPage() {
   React.useEffect(() => {
     setTimeout(() => {
-      history.push('/main');
+      history.push('/homepage');
     }, 4500);
   }, []);
 
